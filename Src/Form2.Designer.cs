@@ -38,7 +38,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WinFormsApp3.Properties.Resources.Untitled_1;
+            this.pictureBox1.Image = global::PsyForm.Properties.Resources.Untitled_1;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
@@ -48,7 +48,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::WinFormsApp3.Properties.Resources.fix;
+            this.pictureBox2.Image = global::PsyForm.Properties.Resources.fix;
             this.pictureBox2.Location = new System.Drawing.Point(12, 68);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 50);
@@ -58,7 +58,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::WinFormsApp3.Properties.Resources.Untitled_2;
+            this.pictureBox3.Image = global::PsyForm.Properties.Resources.Untitled_2;
             this.pictureBox3.Location = new System.Drawing.Point(12, 124);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(100, 50);
