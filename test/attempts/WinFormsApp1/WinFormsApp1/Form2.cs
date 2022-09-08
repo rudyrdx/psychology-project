@@ -45,8 +45,6 @@ namespace WinFormsApp1
         //pattern_3 another pattern of 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
-            
             this.BackColor = Color.White;
             panel1.Size = this.Size;
             panel1.Location = new Point(15, 0);
