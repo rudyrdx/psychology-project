@@ -15,6 +15,7 @@ namespace WinFormsApp5
         private string name;
         private string age;
         private string gender;
+        private int type;
         private static int rows = 2;
         private static int cols = 5;
         private static Random? rand;
@@ -34,11 +35,12 @@ namespace WinFormsApp5
         //pattern 7 shifted first 4 elements to the back and last 4 elements to the front and then reversed and then shifted last 4 elements to the front
         private static List<int> pattern_7 = new List<int> { 60, 40, 90, 20, 70, 0, 50, 30, 80, 10 };
 
-        public Form2(string t1, string t2, string t3)
+        public Form2(string t1, string t2, string t3, int t4)
         {
             this.name = t1.Replace(" ", "_");
             this.age = t2;
             this.gender = t3;
+            this.type = t4;
             InitializeComponent();
             panelr = new Panel();
             panelb = new Panel();
@@ -56,7 +58,6 @@ namespace WinFormsApp5
             this.SetupPanel(panelr);
             this.SetupPanel(panelb);
             this.SetupPanel(panely);
-
 
             {
                 /*int spacing = 10;
@@ -88,7 +89,6 @@ namespace WinFormsApp5
             }*/
             }
 
-
             this.DoLoop();
         }
 
@@ -96,8 +96,8 @@ namespace WinFormsApp5
         {
             int counter = 0;
             const int iter = 3;
-            var watchtime = 10000;
-            var resettime = 5000;
+            var watchtime = 60000;
+            var resettime = 20000;
             var timer1 = new System.Windows.Forms.Timer { Interval = watchtime + resettime };
             timer1.Enabled = true;
             timer1.Tick += (a, e) =>
@@ -174,14 +174,14 @@ namespace WinFormsApp5
             int count = 0;
             int colorval = 255;
             //get a random pattern
-            var current_pattern = patterns[rand.Next(0, patterns.Count)];
+            var current_pattern = patterns[this.type];
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < cols; j++)
                 {
                     //ALLAN EDIT ONLY THIS PART !!!
                     colorval = 255;
-                    PictureBox btn = new PictureBox();
+                    Button btn = new Button();
                     //btn.BorderStyle = BorderStyle.FixedSingle;
                     btn.Size = new Size(width - spacing, height - spacing);
                     btn.Location = new Point(j * width + spacing, i * height + spacing);

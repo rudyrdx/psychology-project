@@ -9,9 +9,9 @@ namespace WinFormsApp5
         public Form1()
         {
             InitializeComponent();
-            Form2 form2 = new Form2(textBox1.Text, textBox2.Text, textBox3.Text);
-            form2.Activate();
-            form2.Show();
+            //Form2 form2 = new Form2(textBox1.Text, textBox2.Text, textBox3.Text, comboBox1.SelectedIndex);
+            //form2.Activate();
+            //form2.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -23,15 +23,15 @@ namespace WinFormsApp5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var res = MessageBox.Show(string.Format("Data:\nName: {0}\nAge: {1}\nGender: {2}\n", 
-                textBox1.Text, textBox2.Text, textBox3.Text), "Are You Sure?", MessageBoxButtons.OKCancel);
+            var res = MessageBox.Show(string.Format("Data:\nName: {0}\nAge: {1}\nGender: {2}\nPattern: {3}",
+                textBox1.Text, textBox2.Text, textBox3.Text, comboBox1.SelectedIndex), "Are You Sure?", MessageBoxButtons.OKCancel);
 
             if (res == DialogResult.OK)
             {
                 if (name.IsMatch(textBox1.Text) && age.IsMatch(textBox2.Text) && gender.IsMatch(textBox3.Text))
                 {
                     //if input data is valid, start the program
-                    Form2 form2 = new Form2(textBox1.Text, textBox2.Text, textBox3.Text);
+                    Form2 form2 = new Form2(textBox1.Text, textBox2.Text, textBox3.Text, comboBox1.SelectedIndex);
                     form2.Activate();
                     form2.Show();
                 }
@@ -76,6 +76,11 @@ namespace WinFormsApp5
             {
                 textBox3.ForeColor = Color.Red;
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
